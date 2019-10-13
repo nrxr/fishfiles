@@ -15,6 +15,13 @@ If you want to update, then pull from the git repository and run the
 If you want to know what's happening inside (or are using a linux different than
 voidlinux), then:
 
+## What comes with this configuration
+
+- [pure prompt](https://github.com/rafaelrinaldi/pure)
+- set of envs on `~/.config/fish/envs`
+- can load private exports from `~/.config/fish/private`, it expects them in the
+  `fish` fashion so `set -Ux NAME 'value'`
+
 ## Pre-requisites
 
 Clone into your terminal:
