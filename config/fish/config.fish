@@ -32,6 +32,11 @@ if test $os = 'mac'
   if test -d /usr/texbin
     set -x PATH $PATH /usr/texbin
   end
+
+  if test -d /usr/local/opt/libffi/lib
+    set -gx LDFLAGS "-L/usr/local/opt/libffi/lib"
+    set -gx PKG_CONFIG_PATH "/usr/local/opt/libffi/lib/pkgconfig"
+  end
 end
 
 # on linux load some special paths
