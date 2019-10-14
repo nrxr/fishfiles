@@ -50,6 +50,11 @@ if test -d ~/code/bin
   set -x PATH $PATH ~/code/bin
 end
 
+# the ghcup based
+if test -d ~/.ghcup
+  set -x PATH ~/.cabal/bin ~/.ghcup/bin $PATH
+end
+
 if test -f ~/.config/fish/private
   source ~/.config/fish/private
 end
