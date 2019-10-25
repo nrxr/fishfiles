@@ -55,6 +55,18 @@ if test -d ~/code/bin
   set -x PATH $PATH ~/code/bin
 end
 
+if test -d ~/code/src && test -d ~/code/bin
+  set -x GOPATH ~/code
+end
+
+# for n node version manager
+if test -d ~/code/n
+  set -x N_PREFIX ~/code/n
+  if test -d ~/code/n/bin
+    set -x PATH ~/code/n/bin $PATH
+  end
+end
+
 # the ghcup based
 if test -d ~/.ghcup
   set -x PATH ~/.cabal/bin ~/.ghcup/bin $PATH
