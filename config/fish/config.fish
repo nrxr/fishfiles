@@ -7,7 +7,7 @@ end
 
 # aliases
 alias vim='nvim'
-alias tmux 'env TERM=xterm-256color tmux'
+alias tmux 'env TERM=screen-256color-bce tmux'
 
 if uname -o | grep -q "Darwin"
   set os 'mac'
