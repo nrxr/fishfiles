@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+PM=$(./pre-setup.sh pkm)
+OS=$(./pre-setup.sh os)
+
+if [ "${OS}" = "mac" ]; then
+  if command -v brew; then
+    printf "will install with brew...\n"
+    brew install fish
+  fi
+elif [ "${OS}" = "linux" ]; then
+  printf "figuring out package manager available...\n"
+  ${PM} fish
+fi
