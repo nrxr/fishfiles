@@ -10,11 +10,16 @@ a linux distro that has either: `apt`, `apk`, `xbps-install` or `pacman` (in
 which case it'll install `yay` and use that to install things, using AURs if
 needed).
 
-## Installing
+## Pre-requisites
 
-This repository comes with a `install.sh` script that will download the
-`pre-setup.sh` script that will install `rcm`, `curl` and `git`. Then it will
-use `rcm` to install the configuration files.
+Clone into your terminal:
+
+    git clone git://github.com/nrxr/fishfiles.git \
+      ~/code/src/github.com/nrxr/fishfiles
+
+Have an interpreter for `sh`.
+
+## Installing
 
 Run on a sh-compatible terminal:
 
@@ -26,9 +31,6 @@ everything with it using the tag `fish`.
 If you want to update, then pull from the git repository and run the
 `install.sh` script again.
 
-If you want to know what's happening inside (or are using a linux different than
-voidlinux), then:
-
 ## What comes with this configuration
 
 - `fish`
@@ -39,30 +41,13 @@ voidlinux), then:
   `fish` fashion so `set -Ux NAME 'value'`. Values I save there are things like
   `GOPRIVATE` and such.
 
-## Pre-requisites
-
-Clone into your terminal:
-
-    git clone git://github.com/nrxr/fishfiles.git \
-      ~/code/src/github.com/nrxr/fishfiles
-
-Install [`rcm`](https://github.com/thoughtbot/rcm):
-
-    # macOS
-    brew tap thoughtbot/formulae
-    brew install rcm
-
-    # voidlinux
-    sudo xbps-install -S rcm
-
 ## Installing the `nvim` configuration files with `rcm`
 
     rcup -d $HOME/code/src/github.com/nrxr/fishfiles \
       -v -t fish \
-      -x README*.md -x LICENSE -x pre-setup.sh
-
-Manually updating can be done by running `pre-setup.sh` again or this same line.
+      -x README*.md -x LICENSE -x pre-setup.sh -x install.sh
 
 ## License
 
-© 2019, nrxr `<nrxr@disroot.org>`. Released under the MIT license terms.
+© 2019-2020, nrxr `<nrxr@disroot.org>`.
+Released under the MIT license terms.
