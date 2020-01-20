@@ -6,7 +6,7 @@ runrcup() {
   printf "running rcup...\n"
   rcup -d . \
     -v -t fish \
-    -x README*.md -x LICENSE -x pre-setup.sh
+    -x README*.md -x LICENSE -x pre-setup.sh -x install.sh
 }
 
 checkPreSetup() {
