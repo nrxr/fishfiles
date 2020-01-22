@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+#
+# 00_DefaultShell makes sure fish is in the /etc/shells file so it can be used
+# as a default shell and then uses chsh to set it as the default.
+#
+
+if ! (grep -q "fish" /etc/shells); then
+  echo "fish not found in /etc/shells, adding it"
+  command -v fish | sudo tee -a /etc/shells
+fi
+
+if [ "$(command -v fish)" != "${SHELL}" ]; then
+  echo "setting fish as default shell"
+  chsh -s "$(command -v fish)"
+fi

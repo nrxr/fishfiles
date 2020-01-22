@@ -1,14 +1,36 @@
 #!/usr/bin/env sh
+#
+# 00_Install makes sure fish is installed before doing the rcup call.
+#
 
-PM=$(./pre-setup.sh pkm)
-OS=$(./pre-setup.sh os)
+PM=$(sh ../../pre-setup.sh pkm)
+OS=$(sh ../../pre-setup.sh os)
 
-if [ "${OS}" = "mac" ]; then
-  if command -v brew; then
-    printf "will install with brew...\n"
-    brew install fish
-  fi
-elif [ "${OS}" = "linux" ]; then
-  printf "figuring out package manager available...\n"
-  ${PM} fish
+PKGS="fish"
+
+printf "On %s and using %s as pm...\n" "${OS}" "${PM}"
+
+if [ "${PM}" = "brew" ] && [ "${OS}" = "mac" ]; then
+    printf "will install %s with brew...\n" "${PKGS}"
+    brew install "${PKGS}"
+elif [ "${PM}" = "xbps" ]; then
+  printf "will install %s with xbps...\n" "${PKGS}"
+  sudo xbps-install -S "${PKGS}"
+elif [ "${PM}" = "apk" ]; then
+  printf "will install %s with apk...\n" "${PKGS}"
+  sudo apk add "${PKGS}"
+elif [ "${PM}" = "apt" ]; then
+  printf "will install %s with apt...\n" "${PKGS}"
+  sudo apt install "${PKGS}"
+elif [ "${PM}" = "pacman" ]; then
+  printf "will install yay with pacman and then install %s...\n" "${PKGS}"
+  installYay "$@"
+  printf "yay installed; installing %s...\n" "${PKGS}"
+  yay -S "${PKGS}"
+elif [ "${PM}" = "yay" ]; then
+  printf "will install %s with yay...\n" "${PKGS}"
+  yay -S "${PKGS}"
+else
+  printf "can't handle your package manager, please install %s\n" "${PKGS}"
+  exit
 fi
