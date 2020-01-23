@@ -12,4 +12,5 @@ fi
 if [ "$(command -v fish)" != "${SHELL}" ]; then
   echo "setting fish as default shell"
   chsh -s "$(command -v fish)"
+  fish
 fi
