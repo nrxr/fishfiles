@@ -9,9 +9,9 @@ end
 alias vim='nvim'
 alias tmux 'env TERM=screen-256color-bce tmux'
 
-if uname -o | grep -q "Darwin"
+if uname -a | grep -q "Darwin"
   set os 'mac'
-else if uname -o | grep -q -i linux
+else if uname -a | grep -q -i linux
   set os 'linux'
 end
 
