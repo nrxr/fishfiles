@@ -40,6 +40,15 @@ If you want to update, then pull from the git repository and run the
 - support for private envs in `~/.config/fish/private`, it expects them in the
   `fish` fashion so `set -Ux NAME 'value'`. Values I save there are things like
   `GOPRIVATE` and such.
+- support for private envs based on current directory in
+  `~/.config/fish/private_variable_dirs`. Example:
+
+ ```fish
+ set --erase NPM_TOKEN
+ if string match -q --regex 'code\/src\/github\.com\/nrxr' $PWD
+   set -gx NPM_TOKEN a-valid-token
+ end
+ ```
 
 ## Installing the `nvim` configuration files with `rcm`
 
