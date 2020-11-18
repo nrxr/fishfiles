@@ -5,6 +5,10 @@ if not functions -q fisher
     fish -c fisher
 end
 
+if functions -q _nrxr_private_dir_envs
+  _nrxr_private_dir_envs
+end
+
 # aliases
 alias vim='nvim'
 alias tmux 'env TERM=screen-256color-bce tmux'
