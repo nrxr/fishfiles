@@ -43,12 +43,12 @@ If you want to update, then pull from the git repository and run the
 - support for private envs based on current directory in
   `~/.config/fish/private_variable_dirs`. Example:
 
- ```fish
- set --erase NPM_TOKEN
- if string match -q --regex 'code\/src\/github\.com\/nrxr' $PWD
+  ```fish
+  set --erase NPM_TOKEN
+  if string match -q --regex 'code\/src\/github\.com\/nrxr' $PWD
    set -gx NPM_TOKEN a-valid-token
- end
- ```
+  end
+  ```
 
 ## Installing the `nvim` configuration files with `rcm`
 
