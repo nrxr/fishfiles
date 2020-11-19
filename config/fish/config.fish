@@ -71,6 +71,12 @@ if test -d ~/code/n
   end
 end
 
+if test -d ~/code/usr
+  if test -d ~/code/usr/bin
+    set -x PATH $PATH ~/code/usr/bin
+  end
+end
+
 # the ghcup based
 if test -d ~/.ghcup
   set -x PATH ~/.cabal/bin ~/.ghcup/bin $PATH
