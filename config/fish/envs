@@ -2,5 +2,5 @@
 
 set -x EDITOR 'nvim'
 set -x TERM 'screen-256color'
-set -x PAGER 'less'
+set -x PAGER 'less -r'
 set -x GO111MODULE on
