@@ -14,8 +14,10 @@ needed).
 
 Clone into your terminal:
 
-    git clone git://github.com/nrxr/fishfiles.git \
-      ~/code/src/github.com/nrxr/fishfiles
+```console
+foo@bar:~$ git clone git://github.com/nrxr/fishfiles.git \
+  ~/code/src/github.com/nrxr/fishfiles
+```
 
 Have an interpreter for `sh`.
 
@@ -23,7 +25,9 @@ Have an interpreter for `sh`.
 
 Run on a sh-compatible terminal:
 
-    ./install.sh
+```console
+foo@bar:~$ ./install.sh
+```
 
 This will install (hopefully) `rcm` if you don't have it and then configure
 everything with it using the tag `fish`.
@@ -35,8 +39,14 @@ If you want to update, then pull from the git repository and run the
 
 - `fish`
 - [pure prompt](https://github.com/rafaelrinaldi/pure)
-- set of basic envs on `~/.config/fish/envs` with `nvim` as `EDITOR`,
-  `screen-256color-bce` as `TERM`, `less` as `PAGER` and `GO111MODULE on`.
+- set of basic envs on `~/.config/fish/envs`:
+
+  ```fish
+  set -x EDITOR 'nvim'
+  set -x TERM 'screen-256color'
+  set -x PAGER 'less -r'
+  set -x GO111MODULE on
+  ```
 - support for private envs in `~/.config/fish/private`, it expects them in the
   `fish` fashion so `set -Ux NAME 'value'`. Values I save there are things like
   `GOPRIVATE` and such.
