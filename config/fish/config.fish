@@ -26,20 +26,38 @@ set -x PATH $PATH /usr/local/{bin/sbin}
 
 # on macOS, install the /usr/local paths for homebrew
 if test $os = 'mac'
-  set -x PATH $PATH /usr/local/opt/{coreutils,gnu-sed}/libexec/gnubin \
-    /usr/local/opt/git/share/git-core/contrib/diff-highlight
-
-  if test -d /usr/local/opt/icu4c/bin
-    set -x PATH $PATH /usr/local/opt/icu4c/{bin,sbin}
-  end
-
   if test -d /usr/texbin
     set -x PATH $PATH /usr/texbin
   end
 
-  if test -d /usr/local/opt/libffi/lib
-    set -gx LDFLAGS "-L/usr/local/opt/libffi/lib"
-    set -gx PKG_CONFIG_PATH "/usr/local/opt/libffi/lib/pkgconfig"
+  if command -v brew > /dev/null
+    set -x PATH $PATH (brew --prefix)/bin
+
+    set git_prefix (brew --prefix git)
+    if test -d $git_prefix
+      set -x PATH $PATH $git_prefix/share/git-core/contrib/diff-highlight
+    end
+
+    set coreutils_prefix (brew --prefix coreutils)
+    if test -d $coreutils_prefix
+      set -x PATH $PATH $coreutils_prefix/libexec/gnubin
+    end
+
+    set gnused_prefix (brew --prefix gnu-sed)
+    if test -d $gnused_prefix
+      set -x PATH $PATH $gnused_prefix/libexec/gnubin
+    end
+
+    set icu4c_prefix (brew --prefix icu4c)
+    if test -d $icu4c_prefix
+      set -x PATH $PATH $icu4c_prefix/{bin,sbin}
+    end
+
+    set libffi_prefix
+    if test -d $libffi_prefix
+      set -gx LDFLAGS "-L"$libffi_prefix"/lib"
+      set -gx PKG_CONFIG_PATH $libffi_prefix"/lib/pkgconfig"
+    end
   end
 end
 
