@@ -30,6 +30,10 @@ if test $os = 'mac'
     set -x PATH $PATH /usr/texbin
   end
 
+  if test -d /opt/homebrew/bin
+    set -x PATH $PATH /opt/homebrew/bin
+  end
+
   if command -v brew > /dev/null
     set -x PATH $PATH (brew --prefix)/bin
 
