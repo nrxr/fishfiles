@@ -1,6 +1,5 @@
 #!/usr/bin/env fish
 
 set -x EDITOR 'nvim'
-set -x TERM 'screen-256color'
+set -x TERM 'xterm-256color-italic'
 set -x PAGER 'less -r'
-set -x GO111MODULE on
