@@ -20,9 +20,6 @@ else if uname -a | grep -q -i linux
 end
 
 # setting up paths
-#
-# the standards
-set -x PATH $PATH /usr/local/{bin/sbin}
 
 # on macOS, install the /usr/local paths for homebrew
 if test $os = 'mac'
@@ -31,7 +28,11 @@ if test $os = 'mac'
   end
 
   if test -d /opt/homebrew/bin
-    set -x PATH $PATH /opt/homebrew/bin
+    set -x PATH /opt/homebrew/bin $PATH
+  end
+
+  if test -d ~/Library/Python/3.9/bin
+    set -x PATH $PATH ~/Library/Python/3.9/bin
   end
 
   if command -v brew > /dev/null
@@ -45,6 +46,10 @@ if test $os = 'mac'
     set coreutils_prefix (brew --prefix coreutils)
     if test -d $coreutils_prefix
       set -x PATH $PATH $coreutils_prefix/libexec/gnubin
+    end
+
+    if test -d /opt/homebrew/opt/curl/bin
+      fish_add_path /opt/homebrew/opt/curl/bin
     end
 
     set gnused_prefix (brew --prefix gnu-sed)
@@ -103,6 +108,10 @@ end
 if test -d ~/.ghcup
   set -x PATH ~/.cabal/bin ~/.ghcup/bin $PATH
 end
+
+# the standard is set at the end, so things like Docker for Mac can't
+# hijack the versions installed via Go or Homebrew.
+set -x PATH $PATH /usr/local/{bin/sbin}
 
 if test -f ~/.config/fish/private
   source ~/.config/fish/private
