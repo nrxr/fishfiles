@@ -21,6 +21,10 @@ end
 
 # setting up paths
 
+if test -d ~/.cargo/bin
+  set -x PATH $PATH ~/.cargo/bin
+end
+
 # on macOS, install the /usr/local paths for homebrew
 if test $os = 'mac'
   if test -d /usr/texbin
