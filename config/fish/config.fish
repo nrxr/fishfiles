@@ -11,7 +11,7 @@ end
 
 # aliases
 alias vim='nvim'
-alias tmux 'env TERM=xterm-256color-italic tmux'
+alias tmux 'env TERM=tmux-256color tmux'
 
 if uname -a | grep -q "Darwin"
   set os 'mac'
@@ -124,3 +124,6 @@ end
 if test -f ~/.config/fish/envs
   source ~/.config/fish/envs
 end
+
+# pure-fish/fish settings
+set --universal pure_color_mute cyan
