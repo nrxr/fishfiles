@@ -71,6 +71,11 @@ if test $os = 'mac'
       set -gx LDFLAGS "-L"$libffi_prefix"/lib"
       set -gx PKG_CONFIG_PATH $libffi_prefix"/lib/pkgconfig"
     end
+
+    set java_prefix (brew --prefix java)
+    if test -d $java_prefix
+      fish_add_path $java_prefix/bin
+    end
   end
 end
 
