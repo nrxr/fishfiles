@@ -118,6 +118,12 @@ if test -d ~/.ghcup
   set -x PATH ~/.cabal/bin ~/.ghcup/bin $PATH
 end
 
+# Set GPG_TTY to avoid the error:
+#   gpg: signing failed: Inappropriate ioctl for device
+#
+# Ref: https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html#Invoking-GPG_002dAGENT
+set -gx GPG_TTY (tty)
+
 # the standard is set at the end, so things like Docker for Mac can't
 # hijack the versions installed via Go or Homebrew.
 set -x PATH $PATH /usr/local/{bin/sbin}
