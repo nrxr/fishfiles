@@ -68,5 +68,5 @@ If you want to update, then pull from the git repository and run the
 
 ## License
 
-© 2019-2020, nrxr `<nrxr@disroot.org>`.
+© 2019-2024, nrxr `<public@nrxr.org>`.
 Released under the MIT license terms.
