@@ -10,8 +10,9 @@ if functions -q _nrxr_private_dir_envs
 end
 
 # aliases
-alias vim='nvim'
+alias vim 'nvim'
 alias tmux 'env TERM=tmux-256color tmux'
+alias tig 'env TERM=xterm-256color tig --show-signature'
 
 if uname -a | grep -q "Darwin"
   set os 'mac'
