@@ -1,14 +1,14 @@
 # fishfiles
 
-These are configuration files for `fish` and an "ideal" terminal setup according
-to my needs. What comes with what I like? A nice looking terminal －which the
-prompt `pure` will provide－ and good-enough configurations.
+These are configuration files for `fish` and an "ideal" terminal setup
+according to my needs. What comes with what I like? A nice looking terminal
+—which the prompt `pure` will provide— and good-enough configurations.
 
-This repository comes with a simple `install.sh` script that as the name says so
-it'll take care of installing the required packages in `macOS` with `brew` or in
-a linux distro that has either: `apt`, `apk`, `xbps-install` or `pacman` (in
-which case it'll install `yay` and use that to install things, using AURs if
-needed).
+This repository comes with a simple `install.sh` script that as the name says
+so it'll take care of installing the required packages in `macOS` with `brew`
+or in a linux distro that has either: `apt`, `apk`, `xbps-install` or `pacman`
+(in which case it'll install `yay` and use that to install things, using AURs
+if needed).
 
 ## Pre-requisites
 
@@ -68,5 +68,8 @@ If you want to update, then pull from the git repository and run the
 
 ## License
 
-© 2019-2024, nrxr `<public@nrxr.org>`.
-Released under the MIT license terms.
+Copyright © 2019-2024, nrxr `<legal@nrxr.org>`.
+
+This software is distributed under the terms of the MIT license.
+
+See LICENSE for details.

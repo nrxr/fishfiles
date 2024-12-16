@@ -36,8 +36,8 @@ if test $os = 'mac'
     set -x PATH /opt/homebrew/bin $PATH
   end
 
-  if test -d ~/Library/Python/3.9/bin
-    set -x PATH $PATH ~/Library/Python/3.9/bin
+  if test -d /opt/homebrew/opt/python@3.12/libexec/bin
+    set -x PATH $PATH /opt/homebrew/opt/python@3.12/libexec/bin
   end
 
   if command -v brew > /dev/null
