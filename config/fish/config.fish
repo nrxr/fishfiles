@@ -28,6 +28,10 @@ end
 
 # on macOS, install the /usr/local paths for homebrew
 if test $os = 'mac'
+  if test -f ~/.claude/local/node_modules/.bin/claude
+    set -x PATH $PATH ~/.claude/local/node_modules/.bin
+  end
+
   if test -d /usr/texbin
     set -x PATH $PATH /usr/texbin
   end
@@ -138,4 +142,5 @@ if test -f ~/.config/fish/envs
 end
 
 # pure-fish/fish settings
-set --universal pure_color_mute cyan
+
+alias claude="/Users/nrxr/.claude/local/claude"
