@@ -100,7 +100,7 @@ if test -d ~/code/bin
   set -x PATH $PATH ~/code/bin
 end
 
-if test -d ~/code/src && test -d ~/code/bin
+if test -d ~/code/src
   set -x GOPATH ~/code
 end
 
