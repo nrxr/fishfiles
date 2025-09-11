@@ -142,5 +142,10 @@ if test -f ~/.config/fish/envs
 end
 
 # pure-fish/fish settings
+set --universal pure_enable_container_detection false
+set --universal pure_enable_single_line_prompt false
+set --universal pure_shorten_prompt_current_directory_length 36
+set --universal pure_truncate_prompt_current_directory_keeps 2
+set --universal pure_symbol_git_dirty •
 
 alias claude="/Users/nrxr/.claude/local/claude"
