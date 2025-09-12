@@ -11,11 +11,22 @@ symbol = " "
 [c]
 symbol = " "
 
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[✖](bold red)'
+vimcmd_symbol = '[❮](bold green)'
+vimcmd_replace_one_symbol = '[❮](bold purple)'
+vimcmd_replace_symbol = '[❮](bold purple)'
+vimcmd_visual_symbol = '[❮](bold yellow)'
+
 [cpp]
 symbol = " "
 
 [cmake]
 symbol = " "
+
+[cmd_duration]
+disabled = true
 
 [conda]
 symbol = " "
@@ -55,13 +66,14 @@ symbol = "  "
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
-symbol = " "
+# symbol = " "
+symbol = " "
 style = 'white'
 
 [git_commit]
 style = 'green'
-only_detached = false
-tag_disabled = false
+only_detached = true
+tag_disabled = true
 tag_symbol = '  '
 
 [git_metrics]
@@ -73,6 +85,8 @@ disabled = true
 style = 'yellow'
 
 [git_status]
+format = '([$all_status$ahead_behind]($style) )'
+modified = '*'
 style = 'red'
 
 [golang]
@@ -173,6 +187,7 @@ Void = " "
 Windows = "󰍲 "
 
 [package]
+format = '[$symbol$version]($style) '
 symbol = "󰏗 "
 style = '208'
 
