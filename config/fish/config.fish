@@ -149,3 +149,5 @@ set --universal pure_truncate_prompt_current_directory_keeps 2
 set --universal pure_symbol_git_dirty •
 
 alias claude="/Users/nrxr/.claude/local/claude"
+
+starship init fish | source
