@@ -7,9 +7,11 @@ symbol = " "
 
 [bun]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [c]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [character]
 success_symbol = '[❯](bold green)'
@@ -21,24 +23,30 @@ vimcmd_visual_symbol = '[❮](bold yellow)'
 
 [cpp]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [cmake]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [cmd_duration]
 disabled = true
 
 [conda]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [crystal]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [dart]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [deno]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [directory]
 read_only = " 󰌾"
@@ -93,12 +101,14 @@ style = 'red'
 format = '[$symbol($version )]($style)'
 style = 'cyan'
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [guix_shell]
 symbol = " "
 
 [haskell]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [haxe]
 symbol = " "
@@ -111,33 +121,41 @@ ssh_symbol = " "
 
 [java]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [julia]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [kotlin]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [lua]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [memory_usage]
 symbol = "󰍛 "
 
 [meson]
 symbol = "󰔷 "
+version_format = 'v${major}.${minor}'
 
 [nim]
 symbol = "󰆥 "
+version_format = 'v${major}.${minor}'
 
 [nix_shell]
 symbol = " "
 
 [nodejs]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [ocaml]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [os.symbols]
 Alpaquita = " "
@@ -193,9 +211,11 @@ style = '208'
 
 [perl]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [php]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [pijul_channel]
 symbol = " "
@@ -205,26 +225,34 @@ symbol = "󰏗 "
 
 [python]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [rlang]
 symbol = "󰟔 "
+version_format = 'v${major}.${minor}'
 
 [ruby]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [rust]
 format = '[$symbol($version )]($style)'
 style = 'red'
 symbol = "󱘗 "
+version_format = 'v${major}.${minor}'
 
 [scala]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [swift]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [zig]
 symbol = " "
+version_format = 'v${major}.${minor}'
 
 [gradle]
 symbol = " "
+version_format = 'v${major}.${minor}'
