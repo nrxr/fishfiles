@@ -2,7 +2,7 @@
 
 These are configuration files for `fish` and an "ideal" terminal setup
 according to my needs. What comes with what I like? A nice looking terminal
-—which the prompt `pure` will provide— and good-enough configurations.
+—which the prompt `starship` will provide— and good-enough configurations.
 
 This repository comes with a simple `install.sh` script that as the name says
 so it'll take care of installing the required packages in `macOS` with `brew`
@@ -38,7 +38,7 @@ If you want to update, then pull from the git repository and run the
 ## What comes with this configuration
 
 - `fish`
-- [pure prompt](https://github.com/rafaelrinaldi/pure)
+- [starship prompt](https://starship.rs/)
 - set of basic envs on `~/.config/fish/envs`:
 
   ```fish
@@ -68,7 +68,7 @@ If you want to update, then pull from the git repository and run the
 
 ## License
 
-Copyright © 2019-2024, nrxr `<legal@nrxr.org>`.
+Copyright © 2019-2025, nrxr `<legal@nrxr.org>`.
 
 This software is distributed under the terms of the MIT license.
 
