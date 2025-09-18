@@ -249,6 +249,10 @@ version_format = 'v${major}.${minor}'
 symbol = " "
 version_format = 'v${major}.${minor}'
 
+[terraform]
+format = '[$symbol]($style) '
+symbol = "󱁢"
+
 [zig]
 symbol = " "
 version_format = 'v${major}.${minor}'
