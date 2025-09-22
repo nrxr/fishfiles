@@ -118,6 +118,8 @@ symbol = " "
 symbol = " "
 
 [hostname]
+format = '[$ssh_symbol$hostname]($style) '
+ssh_only = true
 ssh_symbol = " "
 
 [java]
@@ -253,6 +255,10 @@ version_format = 'v${major}.${minor}'
 [terraform]
 format = '[$symbol]($style) '
 symbol = "󱁢"
+
+[username]
+format = '[$user]($style)@'
+show_always = false
 
 [zig]
 symbol = " "
