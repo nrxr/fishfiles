@@ -14,12 +14,18 @@ symbol = " "
 version_format = 'v${major}.${minor}'
 
 [character]
-success_symbol = '[❯](bold green)'
-error_symbol = '[✖](bold red)'
-vimcmd_symbol = '[❮](bold green)'
-vimcmd_replace_one_symbol = '[❮](bold purple)'
-vimcmd_replace_symbol = '[❮](bold purple)'
-vimcmd_visual_symbol = '[❮](bold yellow)'
+# success_symbol = '[❯](bold green)'
+# error_symbol = '[✖](bold red)'
+# vimcmd_symbol = '[❮](bold green)'
+# vimcmd_replace_one_symbol = '[❮](bold purple)'
+# vimcmd_replace_symbol = '[❮](bold purple)'
+# vimcmd_visual_symbol = '[❮](bold yellow)'
+success_symbol = '[λ](bold green)'
+error_symbol = '[ε](bold red)'
+vimcmd_symbol = '[Ɣ](bold green)'
+vimcmd_replace_one_symbol = '[Ɣ](bold purple)'
+vimcmd_replace_symbol = '[Ɣ](bold purple)'
+vimcmd_visual_symbol = '[Ɣ](bold yellow)'
 
 [cpp]
 symbol = " "
