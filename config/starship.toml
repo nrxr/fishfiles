@@ -94,7 +94,8 @@ style = 'yellow'
 
 [git_status]
 format = '([$all_status$ahead_behind]($style) )'
-modified = '*'
+modified = 'δ' # another jolie character modified = '***'
+stashed = '≡'
 style = 'red'
 
 [golang]
