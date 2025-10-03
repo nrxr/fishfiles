@@ -33,6 +33,10 @@ if test $os = 'mac'
     set -x PATH /opt/homebrew/bin $PATH
   end
 
+  if test -d /opt/homebrew/lib
+    set -x DYLD_LIBRARY_PATH '/opt/homebrew/lib' $DYLD_LIBRARY_PATH
+  end
+
   if test -d /opt/homebrew/opt/python@3.12/libexec/bin
     set -x PATH $PATH /opt/homebrew/opt/python@3.12/libexec/bin
   end
