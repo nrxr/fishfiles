@@ -33,6 +33,10 @@ if test $os = 'mac'
     set -x PATH $PATH /usr/texbin
   end
 
+  if test -d /usr/local/texlive/2025/bin/universal-darwin
+    set -x PATH $PATH /usr/local/texlive/2025/bin/universal-darwin
+  end
+
   if test -d /opt/homebrew/bin
     set -x PATH /opt/homebrew/bin $PATH
   end
@@ -149,6 +153,5 @@ set --universal pure_shorten_prompt_current_directory_length 36
 set --universal pure_truncate_prompt_current_directory_keeps 2
 set --universal pure_symbol_git_dirty •
 
-alias claude="/Users/nrxr/.claude/local/claude"
 
 starship init fish | source
