@@ -263,7 +263,7 @@ format = '[$symbol]($style) '
 symbol = "󱁢"
 
 [username]
-format = '[$user]($style)@'
+format = '[$user]($style) '
 show_always = false
 
 [zig]
