@@ -19,6 +19,10 @@ if test -d ~/.cargo/bin
   set -x PATH $PATH ~/.cargo/bin
 end
 
+if test -d ~/.local/bin
+  set -x PATH $PATH ~/.local/bin
+end
+
 # on macOS, install the /usr/local paths for homebrew
 if test $os = 'mac'
   if test -f ~/.claude/local/node_modules/.bin/claude
